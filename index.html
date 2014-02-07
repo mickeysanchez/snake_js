@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  background-image: url("gradient.jpg");
+  background-size: cover;
+}
+
+ul {
+  width: 300px;
+  border: 1px solid;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  width: 28px;
+  height: 28px;
+  float:left;
+  border: 1px solid gray;
+}
+
+.snake {
+  background-color: green;
+}
+
+.apple {
+  background-color: red;
+}
+
+.group:after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+</style>
+
+<script src="underscore-min.js"></script>
+<script src="jquery.js"></script>
+<script src="snake.js"></script>
+<script src="board.js"></script>
+<script src="view.js"></script>
+
+</head>
+
+<body>
+  <pre></pre>
+
+  <div id="snake"></div>
+</body>
+
+<script>
+  var view = new SnakeGame.View($("#snake"));
+  view.start();
+</script>
+</html>
